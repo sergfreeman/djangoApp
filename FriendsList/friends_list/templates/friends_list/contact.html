@@ -1,0 +1,32 @@
+{% extends 'friends_list/base.html'%}
+
+{%block title %}
+contact
+{%endblock%}
+
+{%block page_info %}
+<h3 align="left">
+    Контактна інформація
+</h3>
+
+{%endblock%}
+
+{%block body%}
+<div align="center">
+     <div>
+        <h4>
+            Сергій Гринишин
+        </h4>
+    </div>
+    <div>
+        <h4>
+            <a href="mailto:sergandd@gmail.com">sergandd@gmail.com</a>
+        </h4>
+    </div>
+</div>
+{%endblock%}
+<h5>
+|{%block prev_link%}<a href="show"> << </a>{%endblock%}|
+    {%block ind_link%}<a href="index"> На головну </a>{%endblock%}
+    |{%block next_link%}>>{%endblock%}|
+</h5>

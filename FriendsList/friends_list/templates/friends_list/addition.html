@@ -1,0 +1,41 @@
+{% extends 'friends_list/base.html'%}
+
+{%block title %}
+contact
+{%endblock%}
+
+{%block page_info %}
+<h3 align="left">
+    Запис інформації в базу даних
+</h3>
+
+{% endblock %}
+
+{% block body %}
+<div align="left">
+     <div>
+        <h4>
+            Вкажіть ваші м'я та вік:
+        </h4>
+    </div>
+    <div>
+
+            <form method="post">
+                {% csrf_token %}
+                {{form.name}}
+                {{form.age}}
+
+
+                <button type="submit" class="btn btn-success">Додати</button><br>
+            </form>
+
+
+
+    </div>
+</div>
+{%endblock%}
+<h5>
+|{%block prev_link%}<a href="index"> << </a>{%endblock%}|
+    {%block ind_link%}<a href="index"> На головну{%endblock%} </a>
+    |{%block next_link%}<a href="show"> >>{%endblock%} </a>|
+</h5>

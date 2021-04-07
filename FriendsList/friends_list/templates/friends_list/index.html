@@ -1,0 +1,40 @@
+{% extends 'friends_list/base.html'%}
+
+{%block title %}
+index
+{%endblock%}
+
+{%block page_info %}
+<h3 align="center">
+    Тестова сторінка написана на фреймворку Django, використовує базу даних SQLlite.
+За допомогою стандартної ORM ми вносимо до бази інформацію по двох полях:
+Ім`я ();
+Вік ().
+</h3>
+
+{%endblock%}
+
+{%block body%}
+<div align="center">
+     <div>
+        <h4>
+            <a href="additional"> Додати інформацію </a>
+        </h4>
+    </div>
+     <div>
+        <h4>
+            <a href="show"> Переглянути інформацію </a>
+        </h4>
+    </div>
+    <div>
+        <h4>
+            <a href="contact"> Контакти </a>
+        </h4>
+    </div>
+</div>
+{%endblock%}
+<h5>
+|{%block prev_link%}<<{%endblock%}|
+    {%block ind_link%}На головну{%endblock%}
+    |{%block next_link%}<a href="additional">>></a>{%endblock%}|
+</h5>
