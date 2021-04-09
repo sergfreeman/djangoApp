@@ -13,12 +13,12 @@ def add_to_list(request):
         form = MyDBForm(request.POST)
         print(form)
         if form.is_valid():
-            print('ooooook')
+
             form.save()
             return redirect('index')
         else:
             error = 'Форма заповнена не кректно'
-            print('no ok')
+
     form = MyDBForm()
     context = {
         'form': form,
